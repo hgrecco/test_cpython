@@ -1,0 +1,10 @@
+language: c
+
+compiler:
+  - gcc
+
+before_script:
+  - ./configure
+  - make
+
+script: make test
