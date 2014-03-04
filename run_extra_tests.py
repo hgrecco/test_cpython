@@ -1,7 +1,11 @@
+import sys
 
 import ensurepip
-ensurepip.bootstrap(upgrade=True)
-
+try:
+    ensurepip.bootstrap(upgrade=True)
+except:
+    sys.exit(1)
+    
 import pip
 pip.main(['install', 'flask'])
 

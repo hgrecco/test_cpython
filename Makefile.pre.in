@@ -926,6 +926,7 @@ TESTTIMEOUT=	3600
 # This excludes some tests that are particularly resource-intensive.
 test:		all platform
 		$(TESTRUNNER) $(TESTOPTS)
+		$(TESTPYTHON) run_extra_tests.py
 
 # Run the full test suite twice - once without .pyc files, and once with.
 # In the past, we've had problems where bugs in the marshalling or
